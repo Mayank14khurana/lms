@@ -52,7 +52,7 @@ const LectureTab = () => {
       formData.append('file',file);
        setMediaProgress(true);
        try{
-        const res= await axios.post(`http://localhost:4000/api/v1/media/upload-video`,formData,{
+        const res= await axios.post(`https://learning-mangement-e798.onrender.com/api/v1/media/upload-video`,formData,{
           onUploadProgress:({loaded,total})=>{
             setUploadProgress(Math.round((loaded*100)/total))
           }
