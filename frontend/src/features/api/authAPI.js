@@ -13,7 +13,8 @@ export const authAPI= createApi({
             query: (inputdata)=>({
                 url:"register",
                 method:"POST",
-                body:inputdata
+                body:inputdata,
+                 credentials: "include"
             })
         }),
         loginUser:builder.mutation({
