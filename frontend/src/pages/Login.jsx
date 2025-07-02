@@ -20,7 +20,7 @@ const Login = () => {
     }
     try {
       setSendingOtp(true);
-      const response = await fetch("http://localhost:4000/api/v1/user/sendotp", {
+      const response = await fetch("https://learning-mangement-e798.onrender.com/api/v1/user/sendotp", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: signupInput.email }),
