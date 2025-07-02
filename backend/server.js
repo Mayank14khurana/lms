@@ -13,12 +13,22 @@ const cors=require('cors');
 const app=express();
 dbConnect();
 
+
+// ✅ Fix 1: Proper CORS config before all routes
+app.use(cors({
+    origin: 'https://lms-jdbobq5yc-mayank14khuranas-projects.vercel.app/',
+    credentials: true,
+}));
+
+// ✅ Fix 2: Allow preflight for all routes
+app.options('*', cors({
+    origin: 'https://lms-jdbobq5yc-mayank14khuranas-projects.vercel.app/',
+    credentials: true,
+}));
+
 app.use(express.json());
 app.use(cookieParesr())
-app.use(cors({
-    origin:'https://lms-umber-three.vercel.app',
-    credentials:true
-}))
+
 
 app.use('/api/v1/user',userRoute);
 app.use('/api/v1/course',courseRoute);
