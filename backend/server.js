@@ -16,13 +16,13 @@ dbConnect();
 
 // ✅ Fix 1: Proper CORS config before all routes
 app.use(cors({
-    origin: 'https://lms-jdbobq5yc-mayank14khuranas-projects.vercel.app/',
+    origin: 'https://lms-duz3d5xgj-mayank14khuranas-projects.vercel.app',
     credentials: true,
 }));
 
 // ✅ Fix 2: Allow preflight for all routes
 app.options('*', cors({
-    origin: 'https://lms-jdbobq5yc-mayank14khuranas-projects.vercel.app/',
+    origin: 'https://lms-duz3d5xgj-mayank14khuranas-projects.vercel.app',
     credentials: true,
 }));
 
