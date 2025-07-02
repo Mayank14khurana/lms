@@ -4,7 +4,7 @@ const jwt=require('jsonwebtoken');
  const isAuthenticated =async (req,res,next)=>{
     try{
     const token =req.cookies.token;
-     console.log('Cookies on protected route:', req.cookies);
+     console.log('Cookies on protected route:', req.cookies.token);
     if(!token){
         return res.status(401).json({
             success:false,
