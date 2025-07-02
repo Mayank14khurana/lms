@@ -2,7 +2,7 @@ import React from 'react'
 import { FaSchool } from "react-icons/fa";
 import { useState, useEffect } from 'react';
 import { Menu, Store } from "lucide-react";
-import DarkMode from '@/darkMode';
+import DarkMode from '../darkMode';
 import { Link, useNavigate } from 'react-router-dom';
 import { useLogoutUserMutation } from '@/features/api/authAPI';
 import { toast } from 'sonner';
