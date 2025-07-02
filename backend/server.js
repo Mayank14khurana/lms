@@ -16,7 +16,7 @@ dbConnect();
 app.use(express.json());
 app.use(cookieParesr())
 app.use(cors({
-    origin:'http://localhost:5173',
+    origin:'https://lms-umber-three.vercel.app',
     credentials:true
 }))
 
