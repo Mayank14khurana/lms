@@ -6,7 +6,7 @@ const courseRoute=require('./routes/course.route');
 const mediaRoute=require('./routes/mediaRoute');
 const purchaseRoute=require('./routes/coursePurchase.route');
 const progressRoute=require('./routes/courseProgress.route');
-const cookieParesr=require('cookie-parser')
+const cookieParser=require('cookie-parser')
 const cors=require('cors');
 
 
@@ -27,7 +27,7 @@ app.options('*', cors({
 }));
 
 app.use(express.json());
-app.use(cookieParesr())
+app.use(cookieParser())
 
 
 app.use('/api/v1/user',userRoute);
