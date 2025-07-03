@@ -58,6 +58,7 @@ export const authAPI = createApi({
       }),
       async onQueryStarted(arg, { queryFulfilled, dispatch }) {
         try {
+          console.log('profile from frontend');
           const result = await queryFulfilled;
           if (result?.data?.user) {
             dispatch(userLoggedIn({ user: result.data.user }));
