@@ -147,6 +147,7 @@ exports.getUserProfile= async (req,res)=>{
     try{
          const userId=req.id;
          const user=await User.findById(userId).select("-password").populate({path:'enrolledCourses',populate:{path:'creator'}})
+        console.log('get profile is hit');
          if(!user){
             return res.status(400).json({
                 success:false,
